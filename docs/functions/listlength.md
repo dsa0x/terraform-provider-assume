@@ -15,6 +15,8 @@ range.
 When given a known value, this function either returns that value verbatim
 or returns an error if the value does not have a length in the promised range.
 
+## Example Usage
+
 For example, if you are writing a module that returns a list of ids where
 it's guaranteed that there will be one element for each element of a list
 given as an input variable, you can report that to callers of your module by
