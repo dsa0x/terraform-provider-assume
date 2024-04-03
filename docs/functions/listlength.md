@@ -2,12 +2,6 @@
 
 Annotates the upper bound, lower bound, or both bounds of a list's length.
 
-```hcl
-provider::assume::listlength(list, min_length, max_length)
-provider::assume::listlengthmin(list, min_length)
-provider::assume::listlengthmax(list, max_length)
-```
-
 When given an unknown value, this function returns the same value annotated
 with a guarantee that its final value will have a length within the given
 range.
@@ -38,3 +32,17 @@ If you specify the same number as both the lower and upper bound of the
 length of a list, Terraform can automatically transform an unknown list into
 the equivalent known list whose values are all unknown, thereby allowing
 `length(list)` to produce a known result even if the elements are unknown.
+
+## Signature
+
+```hcl
+provider::assume::listlength(list, min_length, max_length)
+provider::assume::listlengthmin(list, min_length)
+provider::assume::listlengthmax(list, max_length)
+```
+
+## Arguments
+
+1. `list`
+2. `min_length` (number)
+3. `max_length` (number)
